@@ -1,3 +1,17 @@
+//三级菜单展开图标初始化及页面跟随样式变化
+$(function(){
+    var height = $(window).height()/3 +"px";
+    $(".viewFramework-product .iconleft").css("top",height);
+    $(".viewFramework-product .iconright").css("top",height);
+})
+
+var height=null;
+$(window).resize(function(){
+    height = $(window).height()/3;
+    $(".viewFramework-product .iconleft").css("top",height);
+    $(".viewFramework-product .iconright").css("top",height);
+})
+
 //点击左侧菜单顶部，页面样式变化
 $(document).on("click","[data-sidebar-fold='flex']",function(){
     if($(".iconright",$(this)).hasClass("invisible")){
@@ -64,19 +78,6 @@ $(document).on("click","[data-product-iconright='iconright']",function(){
     $(".viewFramework-product .iconleft").removeClass("conceal").css("left","-15px").animate({left:$(".viewFramework-product-navbar").width()-35+"px"});
 })
 
-//三级菜单展开图标初始化及页面跟随样式变化
-$(function(){
-    var height = $(window).height()/2 +"px";
-    $(".viewFramework-product .iconleft").css("top",height);
-    $(".viewFramework-product .iconright").css("top",height);
-})
-
-var height=null;
-$(window).resize(function(){
-    height = $(window).height()/2;
-    $(".viewFramework-product .iconleft").css("top",height);
-    $(".viewFramework-product .iconright").css("top",height);
-})
 
 //手风琴菜单收缩时样式变化
 var change = function(){

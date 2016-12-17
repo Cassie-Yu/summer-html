@@ -19,6 +19,13 @@ body a:link {
 body a:focus {
   outline: none;
 }
+body ul {
+  margin: 0;
+  padding: 0;
+}
+body ul li {
+  list-style: none;
+}
 .viewFramework-topbar {
   position: relative;
   z-index: 100;
@@ -36,6 +43,9 @@ body a:focus {
   background-color: #ffffff;
   z-index: 100;
   overflow: hidden;
+}
+.viewFramework-body .iconfont {
+  font-size: 16px;
 }
 .viewFramework-sidebar {
   position: fixed;
@@ -72,8 +82,8 @@ body a:focus {
   text-align: center;
 }
 .viewFramework-sidebar .sidebar-fold .iconleft {
-  width: 130px;
-  padding-left: 20px;
+  display: inline-block;
+  margin-left: 20px;
 }
 .viewFramework-sidebar .sidebar-fold .invisible {
   opacity: 0;
@@ -156,6 +166,10 @@ body a:focus {
 }
 .viewFramework-product .iconleft {
   display: block;
+  width: 15px;
+  height: 30px;
+  border-radius: 5px 0 0 5px;
+  background-color: #f7f7f7;
   line-height: 30px;
   position: absolute;
   z-index: 2;
@@ -163,6 +177,11 @@ body a:focus {
 }
 .viewFramework-product .iconright {
   display: block;
+  width: 15px;
+  height: 30px;
+  border-radius: 0 5px 5px 0;
+  background-color: #f7f7f7;
+  opacity: 0.9;
   line-height: 30px;
   position: absolute;
   left: 0;
@@ -173,15 +192,38 @@ body a:focus {
   display: none;
 }
 .product-navbar-container {
-  width: 0;
+  width: 0px;
   height: 100%;
   overflow: hidden;
+  font-size: 12px;
 }
 .product-navbar-container .viewFramework-product-navbar {
   width: 200px;
   height: 100%;
   background-color: #eaedf1;
   overflow-y: scroll;
+}
+.product-navbar-container .viewFramework-product-navbar a {
+  color: #000;
+}
+.product-navbar-container .viewFramework-product-navbar .list-title {
+  font-weight: bolder;
+  height: 70px;
+  line-height: 70px;
+  padding-left: 20px;
+}
+.product-navbar-container .viewFramework-product-navbar .list-content {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.product-navbar-container .viewFramework-product-navbar .listchange {
+  background-color: #ffffff;
+}
+.product-navbar-container .viewFramework-product-navbar .listover {
+  background-color: #f4f6f8;
 }
 .viewFramework-product-body {
   width: auto;
